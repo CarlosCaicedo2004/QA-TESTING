@@ -1,4 +1,4 @@
-# QA Portfolio — [Tu Nombre]
+# QA Portfolio CARLOS MAURICIO CAICEDO DIAGO
 
 Portafolio de QA Testing enfocado en demostrar habilidades prácticas para un rol de **QA Tester Junior**, cubriendo pruebas manuales, automatización y testing de APIs.
 
