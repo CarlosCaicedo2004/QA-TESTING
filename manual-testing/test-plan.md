@@ -53,5 +53,5 @@ Validar que los flujos principales (autenticación, catálogo de productos, carr
 | Usuarios especiales (problem_user, etc.) tienen bugs intencionales | Bajo | Documentarlos como hallazgos esperados |
 
 ## 10. Roles
-- **Diseño y ejecución de pruebas:** [Tu nombre]
-- **Reporte de defectos:** [Tu nombre]
+- **Diseño y ejecución de pruebas:** Carlos Mauricio Caicedo Diago
+- **Reporte de defectos:** Carlos Mauricio Caicedo Diago
