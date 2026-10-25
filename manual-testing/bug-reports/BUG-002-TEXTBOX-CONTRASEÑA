@@ -1,0 +1,50 @@
+# BUG-00X: Textbox erroneo a la hora de escribir una contraseña erronea.
+
+## Resumen
+Cuando el usuario pone mal la contraseña para iniciar sesion, el sisitema arroja un textbox erroneo, donde las letas de su contenido sale lejso del textbox
+## Entorno
+- **URL:** https://www.saucedemo.com
+- **Navegador:** Chrome
+- **Usuario:** standard_user
+
+## Pasos para reproducir
+1. Ir a https://www.saucedemo.com
+2. Iniciar sesión con [usuario] / secret_sauce
+3. [Siguiente paso]
+4. [Siguiente paso]
+
+## Resultado actual
+[Qué pasó realmente, con el texto exacto de mensajes o nombres]
+
+## Resultado esperado
+[Qué debería haber pasado]
+
+## Severidad / Prioridad
+- **Severidad:** [Alta / Media / Baja]
+- **Prioridad:** [Alta / Media / Baja]
+
+## Evidencia
+[Captura de pantalla, la agregamos después]
+
+## Notas
+[Caso de prueba relacionado, por ejemplo TC-008, o si se encontró en la exploración TC-025]
+Plantilla para MEJ (mejora)
+# MEJ-00X: [Título corto de la mejora]
+
+## Tipo
+Mejora de usabilidad (no es un defecto funcional)
+
+## Descripción
+[Qué falta o qué se podría mejorar]
+
+## Dónde se observó
+[Página o sección, y caso de prueba relacionado]
+
+## Impacto
+[Cómo afecta al usuario que esto no exista]
+
+## Sugerencia
+[Qué propones concretamente]
+
+## Severidad / Prioridad
+[Baja / Baja]
