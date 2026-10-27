@@ -2,7 +2,7 @@
 
 Portafolio de QA Testing enfocado en demostrar habilidades prácticas para un rol de **QA Tester Junior**, cubriendo pruebas manuales, automatización y testing de APIs.
 
-## 📋 Contenido
+##  Contenido
 
 ### 1. Manual Testing (`/manual-testing`)
 Pruebas manuales sobre [SauceDemo](https://www.saucedemo.com), una app de e-commerce de práctica.
@@ -18,10 +18,10 @@ Scripts de automatización con Selenium/Cypress cubriendo los flujos críticos (
 ### 3. API Testing (`/api-testing-postman`) — *próximamente*
 Colección de Postman probando endpoints de una API pública de e-commerce.
 
-## 🛠️ Herramientas usadas
+##  Herramientas usadas
 - Documentación: Markdown, CSV
 - App bajo prueba: [SauceDemo](https://www.saucedemo.com)
 - Próximamente: Selenium, Cypress, Postman, Git
 
-## 🎯 Sobre este portafolio
+##  Sobre este portafolio
 Este repositorio demuestra, de forma práctica, el ciclo completo de QA manual: desde la planificación (test plan) hasta el diseño de casos de prueba y el reporte estructurado de defectos, como base para avanzar hacia automatización y testing de APIs.
