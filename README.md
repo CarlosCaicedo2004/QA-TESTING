@@ -13,7 +13,6 @@ Pruebas manuales sobre [SauceDemo](https://www.saucedemo.com), una app de e-comm
 **Hallazgo destacado:** al usar el usuario `problem_user`, se detectó que las imágenes de los productos no corresponden a cada artículo (ver [BUG-001](./manual-testing/bug-reports/BUG-001-imagenes-incorrectas-problem-user.md)).
 
 ### 2. Automation (`/automation-selenium-python`)
-### 2. Automation (`/automation-selenium-python`)
 Pruebas automatizadas con **Python, Selenium y pytest** sobre SauceDemo. Cada prueba lleva en su nombre el ID del caso manual que automatiza, así que se puede rastrear de la hoja de casos al código.
 
 - `test_login.py`: TC-001, TC-002, TC-003
