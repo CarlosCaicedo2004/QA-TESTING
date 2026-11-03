@@ -26,8 +26,16 @@ pip install -r requirements.txt
 python -m pytest -v
 ```
 
-### 3. API Testing (`/api-testing-postman`) — *próximamente*
-Colección de Postman probando endpoints de una API pública de e-commerce.
+### 3. API Testing (`/api-testing-postman`)
+Colección de **Postman** con pruebas sobre la API pública de [AutomationExercise](https://automationexercise.com/api_list). Incluye tests automáticos (`pm.test`) que validan el status HTTP, el `responseCode` del body y los mensajes de respuesta.
+
+- `GET /api/productsList`: lista de productos
+- `POST /api/searchProduct`: búsqueda con y sin parámetro obligatorio
+- `POST /api/verifyLogin`: login con credenciales válidas e inválidas
+
+**Hallazgo destacado:** la API responde con status HTTP `200` incluso cuando la petición es inválida o el usuario no existe, y el error real viaja solo en el `responseCode` del body (400 o 404). Los tests marcados como `BUG` fallan a propósito para dejar este defecto documentado.
+
+**Cómo usarla:** importa `collection.json` en Postman (Import → seleccionar el archivo) y ejecuta las peticiones.
 
 ##  Herramientas usadas
 - Documentación: Markdown, CSV
