@@ -1,0 +1,197 @@
+{
+  "info": {
+    "_postman_id": "7e0f6792-8ad2-4ea8-ad7e-4a0c617271c7",
+    "name": "ApiTEST",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48829380",
+    "_collection_link": "https://go.postman.co/collection/48829380-7e0f6792-8ad2-4ea8-ad7e-4a0c617271c7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET lista de productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar producto",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"El status HTTP es 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"El responseCode del body es 200\", function () {\r\n    const json = pm.response.json();\r\n    pm.expect(json.responseCode).to.eql(200);\r\n});\r\n\r\npm.test(\"Devuelve al menos un producto\", function () {\r\n    const json = pm.response.json();\r\n    pm.expect(json.products.length).to.be.above(0);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "search_product",
+              "value": "top",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar producto sin parametros",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"El body indica responseCode 400\", function () {\r\n    const json = pm.response.json();\r\n    pm.expect(json.responseCode).to.eql(400);\r\n});\r\n\r\npm.test(\"El mensaje indica que falta search_product\", function () {\r\n    const json = pm.response.json();\r\n    pm.expect(json.message).to.include(\"search_product parameter is missing\");\r\n});\r\n\r\npm.test(\"BUG: el status HTTP deberia ser 400\", function () {\r\n    pm.response.to.have.status(400);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "search_product",
+              "value": "top",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LOGIN VALIDO",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"El status HTTP es 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"El responseCode del body es 200\", function () {\r\n    pm.expect(pm.response.json().responseCode).to.eql(200);\r\n});\r\n\r\npm.test(\"El mensaje confirma que el usuario existe\", function () {\r\n    pm.expect(pm.response.json().message).to.eql(\"User exists!\");\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "baibai@gmail.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "baibai",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LOGIN INVALIDO",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"El responseCode del body es 404\", function () {\r\n    pm.expect(pm.response.json().responseCode).to.eql(404);\r\n});\r\n\r\npm.test(\"El mensaje indica que el usuario no se encontró\", function () {\r\n    pm.expect(pm.response.json().message).to.eql(\"User not found!\");\r\n});\r\n\r\npm.test(\"BUG: el status HTTP deberia ser 404\", function () {\r\n    pm.response.to.have.status(404);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "baibai@gmail.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "baibai12",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
