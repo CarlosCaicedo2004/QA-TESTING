@@ -1,0 +1,30 @@
+# BUG-003: El mensaje de error del login no cabe en su recuadro
+
+## Resumen
+Al iniciar sesión con una contraseña incorrecta, el mensaje de error es más largo que el recuadro que lo contiene y el texto no se ajusta.
+
+## Entorno
+- **URL:** https://www.saucedemo.com
+- **Navegador:** Chrome (zoom 100 %, ventana: [completar])
+- **Usuario:** standard_user con contraseña incorrecta
+
+## Pasos para reproducir
+1. Ir a https://www.saucedemo.com
+2. Ingresar standard_user y una contraseña incorrecta (por ejemplo, wrong_password)
+3. Click en Login
+
+## Resultado actual
+Aparece el mensaje "Epic sadface: Username and password do not match any user in this service". El texto es demasiado largo para el recuadro y no cabe. [Completar: ¿se corta, se desborda o se sale por un lado?]
+
+## Resultado esperado
+El mensaje debe verse completo dentro de su recuadro, con el contenedor ajustado al texto.
+
+## Severidad / Prioridad
+- **Severidad:** Baja
+- **Prioridad:** Baja
+
+## Evidencia
+[Captura del mensaje de error]
+
+## Notas
+Relacionado con TC-003.
