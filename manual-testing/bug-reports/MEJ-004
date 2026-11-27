@@ -1,0 +1,23 @@
+# MEJ-004: El carrito tiene funcionalidades limitadas
+
+## Tipo
+Mejora de usabilidad (no es un defecto funcional)
+
+## Descripción
+La página del carrito lista los productos, pero ofrece poca información y control antes del pago. Se sugiere agregar:
+- Imagen del producto en cada línea del carrito
+- Selector de cantidad para cambiar las unidades de cada producto
+- Subtotal con el total de los productos
+- Impuestos y costo de envío visibles antes de llegar al checkout
+
+## Dónde se observó
+Página del carrito, casos TC-013 a TC-018
+
+## Impacto
+El usuario no puede ajustar su compra desde el carrito ni saber cuánto va a pagar hasta llegar al final del checkout, lo que puede aumentar los abandonos.
+
+## Sugerencia
+Incorporar las cuatro funciones, empezando por el selector de cantidad y el subtotal.
+
+## Severidad / Prioridad
+Baja / Baja
